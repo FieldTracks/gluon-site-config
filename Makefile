@@ -42,7 +42,7 @@ dist/%: init
 	echo "Building Target: $*" >> $(PWD)/dist/err.txt
 
 	mkdir -p $(PWD)/dist/
-	make -j2 -C gluon all GLUON_TARGET=$* V=99 2>> $(PWD)/dist/err.txt >> $(PWD)/dist/out.txt
+	make -j2 -C gluon all GLUON_DEPRECATED=1 GLUON_TARGET=$* V=99 2>> $(PWD)/dist/err.txt >> $(PWD)/dist/out.txt
 	rsync -Hav $(PWD)/gluon/output/images/ $(PWD)/dist/
 
 	make -j2 -C gluon clean GLUON_TARGET=$*
