@@ -49,7 +49,7 @@ dist/%: init
 
 gluon/Makefile:
 	#git clone https://github.com/freifunk-gluon/gluon.git -b $(GLUON_RELEASE)
-	git clone https://github.com/yanosz/gluon.git -b master+wifi-encrypt
+	git clone https://github.com/yanosz/gluon.git -b master+wifi_encrypt
 	mkdir -p $(PWD)/gluon/site/i18n
 
 clean:
