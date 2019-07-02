@@ -6,7 +6,7 @@ GLUON_MULTIDOMAIN=1
 
 GLUON_SITE_PACKAGES := \
         -hostapd-mini \
-				-uhttpd \
+	-uhttpd \
 	gluon-mesh-batman-adv-15 \
 	gluon-respondd \
 	gluon-ebtables-filter-multicast \
@@ -17,7 +17,7 @@ GLUON_SITE_PACKAGES := \
 	haveged \
 	iwinfo \
 	respondd-module-airtime \
-	gluon-authorized-keys \
+	gluon-authorized-keys gluon-lock-password \
 	gluon-wlan-encryption-psk
 
 # basic support for USB stack
