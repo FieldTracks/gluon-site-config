@@ -36,7 +36,7 @@ init: gluon/Makefile
 dist/%: init
 	cp -a site/* $(PWD)/gluon/site/
 	envsubst < site/site.conf > $(PWD)/gluon/site/site.conf
-	make -C gluon update
+	make -C gluon update GLUON_DEPRECATED=1
 
 	echo "Building Target: $*" >> $(PWD)/dist/out.txt
 	echo "Building Target: $*" >> $(PWD)/dist/err.txt
