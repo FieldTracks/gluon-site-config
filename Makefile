@@ -18,7 +18,7 @@ world: dist
 
 # Create all distribution artifacts in ./dist
 dist: $(addprefix dist/,$(TARGETS))
-	mv $(PWD)/gluon/output/packages/* $(PWD)/dist/*
+	mv $(PWD)/gluon/output/packages $(PWD)/dist
 	find $(PWD)/dist -type f -print0  | xargs -0 sha512sum > $(PWD)/dist/sha512sums
 
 # Log Build
