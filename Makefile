@@ -45,7 +45,7 @@ dist/%: init
 	make -j2 -C gluon all GLUON_DEPRECATED=1 GLUON_TARGET=$* V=99 2>> $(PWD)/dist/err.txt >> $(PWD)/dist/out.txt
 	rsync -Hav $(PWD)/gluon/output/images/ $(PWD)/dist/
 
-	make -j2 -C gluon clean GLUON_TARGET=$*
+	make -j2 -C gluon clean GLUON_TARGET=$* GLUON_DEPRECATED=1
 
 gluon/Makefile:
 	#git clone https://github.com/freifunk-gluon/gluon.git -b $(GLUON_RELEASE)
