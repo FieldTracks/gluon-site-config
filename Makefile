@@ -18,7 +18,7 @@ world: dist
 
 # Create all distribution artifacts in ./dist
 dist: $(addprefix dist/,$(TARGETS))
-	rsync -a --delete $(PWD)/gluon/output/packages/ $(PWD)/dist/
+	mv $(PWD)/gluon/output/packages/* $(PWD)/dist/*
 	find $(PWD)/dist -type f -print0  | xargs -0 sha512sum > $(PWD)/dist/sha512sums
 
 # Log Build
@@ -42,6 +42,7 @@ dist/%: init
 	echo "Building Target: $*" >> $(PWD)/dist/err.txt
 
 	mkdir -p $(PWD)/dist/
+	rm -rf $(PWD)/dist/*
 	make -j2 -C gluon all GLUON_DEPRECATED=1 GLUON_TARGET=$* V=99 2>> $(PWD)/dist/err.txt >> $(PWD)/dist/out.txt
 	rsync -Hav $(PWD)/gluon/output/images/ $(PWD)/dist/
 
