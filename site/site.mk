@@ -78,7 +78,10 @@ TOOLS_PACKAGES := \
 	socat \
 	tcpdump \
 	usbutils \
-	vnstat
+	vnstat \
+	kmod-usb-serial \
+	ser2net \
+	screen
 
 GLUON_SITE_PACKAGES += \
 	$(USB_PACKAGES_BASIC) \
