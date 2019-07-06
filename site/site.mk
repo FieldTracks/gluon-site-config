@@ -80,8 +80,7 @@ TOOLS_PACKAGES := \
 	usbutils \
 	vnstat \
 	kmod-usb-serial \
-	ser2net \
-	screen
+	ser2net
 
 GLUON_SITE_PACKAGES += \
 	$(USB_PACKAGES_BASIC) \
