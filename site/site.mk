@@ -18,8 +18,9 @@ GLUON_SITE_PACKAGES := \
 	iwinfo \
 	respondd-module-airtime \
 	gluon-authorized-keys gluon-lock-password \
-	gluon-wlan-encryption-psk
-
+	gluon-wlan-encryption-psk \
+	ipsec-minimal \
+	
 # basic support for USB stack
 USB_PACKAGES_BASIC := \
 	kmod-usb-core \
